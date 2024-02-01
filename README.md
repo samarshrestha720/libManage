@@ -50,6 +50,7 @@ Payload:
 * *Get User by ID:* Endpoint to retrieve details of a specific user by UserID.
     `GET /api/users/{UserID:int}` eg: `http://127.0.0.1:5000/api/users/1`
 * *Add a book:* `POST /api/books`
+eg: `http://127.0.0.1:5000/api/books`
 Payload: `{
     "Title": "Programming",
     "ISBN": "112333aa321das1",
@@ -65,7 +66,7 @@ Payload: `{
     "Language": "English"
 }`
 
-* *Get all books:* `GET /api/books`
+* *Get all books:* `GET /api/books` eg: `http://127.0.0.1:5000/api/books`
 
 * *Get a book details by id:* `GET /api/books/{BookID:int}/bookdetails` eg:`http://127.0.0.1:5000/api/books/1/bookdetails` 
 
@@ -92,3 +93,11 @@ Payload: `{
 
 * *Get all Borrowed Books:* `GET /api/bookborrow`
 eg: `http://127.0.0.1:5000/api/bookborrow`
+
+
+
+
+
+    
+
+
