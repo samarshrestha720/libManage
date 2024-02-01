@@ -36,7 +36,7 @@ step 11: Use postman or other software to test the api
 ## Documentation
 
 * *Create User:* Endpoint to create a new user:
-    `POST /api/users`
+    `POST /api/users` eg:`http://127.0.0.1:5000/api/users`
 Payload:
 `{
   "Name": "John Doe",
@@ -45,9 +45,10 @@ Payload:
 `
 * *Get All Users:* Endpoint to retrieve details of all users:
     `GET /api/users`
+    eg: `http://127.0.0.1:5000/api/users`
 
 * *Get User by ID:* Endpoint to retrieve details of a specific user by UserID.
-    `GET /api/users/{id:int}`
+    `GET /api/users/{UserID:int}` eg: `http://127.0.0.1:5000/api/users/1`
 * *Add a book:* `POST /api/books`
 Payload: `{
     "Title": "Programming",
@@ -55,29 +56,39 @@ Payload: `{
     "PublishedDate":"2009-06-08",
     "Genre":"Edu"
 }`
+
+* *Add book details:* `POST /api/books/{BookID:int}/bookdetails`
+eg: `http://127.0.0.1:5000/api/books/1/bookdetails`
+Payload: `{
+    "NumberOfPages": 300,
+    "Publisher": "Test Publisher 1",
+    "Language": "English"
+}`
+
 * *Get all books:* `GET /api/books`
 
-* *Get a book details by id:* `GET /api/books/{id:int}/bookdetails` 
+* *Get a book details by id:* `GET /api/books/{BookID:int}/bookdetails` eg:`http://127.0.0.1:5000/api/books/1/bookdetails` 
 
-* *Update book details:* `PUT /api/books/{id:int}/bookdetails`
+
+* *Update book details:* `PUT /api/books/{BookID:int}/bookdetails`   eg: `http://127.0.0.1:5000/api/books/1/bookdetails` 
+Payload: `{
+    "Language": "Nepali",
+    "NumberOfPages": 800,
+    "Publisher" : "Abc Publisher"
+}`
 
 * *Record book borrowed:* `POST /api/bookborrow`
+eg: `http://127.0.0.1:5000/api/bookborrow`
 Payload: `{
     "BookID": 1,
     "UserID": 1
 }`
 
 * *Update returned book:* `PUT /api/bookborrow`
+eg: `http://127.0.0.1:5000/api/bookborrow`
 Payload: `{
     "BookID": 2
 }`
 
 * *Get all Borrowed Books:* `GET /api/bookborrow`
-
-
-
-
-
-    
-
-
+eg: `http://127.0.0.1:5000/api/bookborrow`
