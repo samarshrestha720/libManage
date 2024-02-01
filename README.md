@@ -1,7 +1,7 @@
 
 # Library Management System RestAPI
 
-A Library Management System RestAPI using Flask and SQLite
+A Library Management System RestAPI using flask and SQLite
 
 
 ## Setup
@@ -35,5 +35,49 @@ step 11: Use postman or other software to test the api
 
 ## Documentation
 
-[Documentation](https://linktodocumentation)
+* *Create User:* Endpoint to create a new user:
+    `POST /api/users`
+Payload:
+`{
+  "Name": "John Doe",
+  "Email": "john.doe@example.com"
+}
+`
+* *Get All Users:* Endpoint to retrieve details of all users:
+    `GET /api/users`
+
+* *Get User by ID:* Endpoint to retrieve details of a specific user by UserID.
+    `GET /api/users/{id:int}`
+* *Add a book:* `POST /api/books`
+Payload: `{
+    "Title": "Programming",
+    "ISBN": "112333aa321das1",
+    "PublishedDate":"2009-06-08",
+    "Genre":"Edu"
+}`
+* *Get all books:* `GET /api/books`
+
+* *Get a book details by id:* `GET /api/books/{id:int}/bookdetails` 
+
+* *Update book details:* `PUT /api/books/{id:int}/bookdetails`
+
+* *Record book borrowed:* `POST /api/bookborrow`
+Payload: `{
+    "BookID": 1,
+    "UserID": 1
+}`
+
+* *Update returned book:* `PUT /api/bookborrow`
+Payload: `{
+    "BookID": 2
+}`
+
+* *Get all Borrowed Books:* `GET /api/bookborrow`
+
+
+
+
+
+    
+
 
