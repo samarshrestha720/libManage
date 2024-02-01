@@ -1,7 +1,7 @@
 
 # Library Management System RestAPI
 
-A Library Management System RestAPI using flask and SQLite
+A Library Management System RestAPI using flask and SQLite. The SQLite db is located in /instance/lib.db
 
 
 ## Setup
