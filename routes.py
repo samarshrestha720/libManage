@@ -277,9 +277,8 @@ def get_borrowed_books():
     Endpoint to list all books currently borrowed from the library.
     """
     try:
-        data = request.get_json()
         borrowed_books = BorrowedBooks.query.filter_by(
-            BookID=data['BookID'], ReturnDate=None).all()
+            ReturnDate=None).all()
         if borrowed_books:
             return make_response(jsonify([book.json() for book in borrowed_books]), 200)
         return make_response(jsonify({'message': 'No books are currenty issued'}), 404)
