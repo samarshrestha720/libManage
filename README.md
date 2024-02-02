@@ -35,6 +35,8 @@ step 11: Use postman or other software to test the api
 
 ## Documentation
 
+Note: All request and response payloads are in json format
+
 * *Create User:* Endpoint to create a new user:
     `POST /api/users` eg:`http://127.0.0.1:5000/api/users`
 Payload:
